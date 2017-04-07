@@ -1,0 +1,24 @@
+{
+  "name": "simulate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "author": "Denver Daniels",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.2",
+    "johnny-five": "^0.10.6",
+    "socket.io": "^1.7.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/denvereezy/PiBot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/denvereezy/PiBot/issues"
+  },
+  "homepage": "https://github.com/denvereezy/PiBot#readme"
+}
