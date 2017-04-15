@@ -1,0 +1,220 @@
+body {
+    overflow: hidden;
+    margin-top: 1%;
+}
+
+.portfolio-item {
+    margin-bottom: 25px;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+#wrapper {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+#speedometer {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgb(63, 63, 63);
+    /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(63, 63, 63, 1) 0%, rgba(14, 14, 14, 1) 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(63, 63, 63, 1)), color-stop(100%, rgba(14, 14, 14, 1)));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(63, 63, 63, 1) 0%, rgba(14, 14, 14, 1) 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(63, 63, 63, 1) 0%, rgba(14, 14, 14, 1) 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(63, 63, 63, 1) 0%, rgba(14, 14, 14, 1) 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, rgba(63, 63, 63, 1) 0%, rgba(14, 14, 14, 1) 100%);
+    /* W3C */
+    box-shadow: 0px 0px 10px black inset;
+}
+
+#kmh {
+    color: white;
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 138px;
+    text-shadow: 0px 0px px black;
+}
+
+#o {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    margin-left: 135px;
+    margin-top: 140px;
+    box-shadow: 0px 0px 5px black;
+    border-radius: 50%;
+    transition: transform 1s linear;
+    transform: rotate(-120deg);
+    /*0 - 270 km/h*/
+}
+
+#o>p {
+    color: red;
+    transform: scaleY(11);
+    transform: scaleX();
+    margin-top: -63px;
+    margin-left: 7px;
+    text-shadow: 0px 0px .1px black;
+}
+
+#lines {
+    position: absolute;
+    z-index: 0;
+    width: 299px;
+    height: 300px;
+    background: url("../lines.png") no-repeat;
+    margin-top: -4px;
+    margin-left: 1px;
+}
+
+li {
+    list-style: none;
+    color: white;
+    position: absolute;
+    display: block;
+    z-index: 0;
+    text-shadow: 0px 0px 4px black;
+    z-index: 0;
+}
+
+ul>li#l1 {
+    margin-top: 190px;
+    margin-left: -2px;
+}
+
+ul>li#l2 {
+    margin-top: 150px;
+    margin-left: -10px;
+}
+
+ul>li#l3 {
+    margin-top: 110px;
+    margin-left: -5px;
+}
+
+ul>li#l4 {
+    margin-top: 80px;
+    margin-left: 10px;
+}
+
+ul>li#l5 {
+    margin-top: 56px;
+    margin-left: 25px;
+}
+
+ul>li#l6 {
+    margin-top: 38px;
+    margin-left: 60px;
+}
+
+ul>li#l7 {
+    margin-top: 30px;
+    margin-left: 95px;
+}
+
+ul>li#l8 {
+    margin-top: 38px;
+    margin-left: 130px;
+}
+
+ul>li#l9 {
+    margin-top: 56px;
+    margin-left: 165px;
+}
+
+ul>li#l10 {
+    margin-top: 80px;
+    margin-left: 183px;
+}
+
+ul>li#l11 {
+    margin-top: 110px;
+    margin-left: 200px;
+}
+
+ul>li#l12 {
+    margin-top: 150px;
+    margin-left: 203px;
+}
+
+ul>li#l13 {
+    margin-top: 190px;
+    margin-left: 196px;
+}
+
+#reading {
+    float: left;
+    color: turquoise;
+    font-size: 3.5vw;
+    font-weight: 900;
+    text-align: center;
+    width: 25vw;
+    height: 70vh;
+}
+
+button {
+    font-family: 'Dosis', sans-serif;
+    width: 6vw;
+    height: 6vh;
+    border-radius: 3vh;
+    border: 4px solid black;
+    color: black;
+    font-size: 2vh;
+}
+
+button:hover {
+    background: #ff0000;
+    color: #ffffff;
+    text-shadow: 1px 1px black;
+}
+
+#reading #left {
+    float: left;
+}
+
+#reading #right {
+    float: right;
+}
+
+.camera {
+    background: black;
+    width: 40vw;
+    height: 45vh;
+}
+
+.sensor {
+    background: black;
+    color: #00FF00;
+    width: 40vw;
+    height: 45vh;
+    text-align: center;
+    font-size: 2em;
+}
+
+#arrow {
+    font-weight: bold;
+    margin: 10px auto;
+    width: 110px;
+}
+
+hr {
+    border-color: #00ff00;
+}
+
+#camSrc {
+    width: 40vw;
+    text-align: center;
+    border: 1px solid #00ff00;
+    color: #00ff00;
+}
