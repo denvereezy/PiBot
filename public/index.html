@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title></title>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/2-col-portfolio.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-6 portfolio-item">
+                <div id="wrapper">
+                    <div id="speedometer">
+                        <ul>
+                            <li id="l1">20</li>
+                            <li id="l2">40</li>
+                            <li id="l3">60</li>
+                            <li id="l4">80</li>
+                            <li id="l5">100</li>
+                            <li id="l6">120</li>
+                            <li id="l7">140</li>
+                            <li id="l8">160</li>
+                            <li id="l9">180</li>
+                            <li id="l10">200</li>
+                            <li id="l11">220</li>
+                            <li id="l12">240</li>
+                            <li id="l13">260</li>
+                        </ul>
+                        <div id="lines"></div>
+                        <div id="kmh">km/h</div>
+                        <div class="clear"></div>
+                        <div id="o" class="clear">
+                            <p id="arrow">▲</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 portfolio-item">
+                <iframe id="camera" class="camera"></iframe>
+                <input type="text" id="camSrc" placeholder="enter camera source">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 portfolio-item">
+                <div class="gears">
+                    <p>Gears</p>
+                    <button class="gear" id="g1">1</button>
+                    <button class="gear" id="g2">2</button>
+                    <button class="gear" id="g3">3</button>
+                </div><br>
+                <div id="reading">
+                    <p><button id="fwrd">forward</button></p>
+                    <p><button id="left">left</button></p>
+                    <p><button id="right">right</button></p>
+                    <p><button id="back">reverse</button></p>
+                    <p><button id="stop">stop</button></p>
+                </div>
+            </div>
+            <div class="col-md-6 portfolio-item">
+                <div class="sensor">
+                    <h3>Sensor Readings</h3>
+                    <hr>
+                    <p id="readings"></p>
+                    <h3>CPU temp</h3>
+                    <hr>
+                    <p id="temp"></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/js/jquery-3.1.0.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/master.js"></script>
+
+</body>
+
+</html>
