@@ -6,7 +6,7 @@ module.exports = function() {
         setInterval(() => {
             const temp = fs.readFileSync('/sys/class/thermal/thermal_zone0/temp');
             const temp_c = temp / 1000;
-            cb(temp_c);
+            cb(`${temp_c}C`);
         }, 1000);
     };
 };

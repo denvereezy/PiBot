@@ -61,6 +61,6 @@ $(document).ready(function() {
     });
 
     io.on('temp', function(data) {
-        $('#temp').html(data.temp + 'C');
+        $('#temp').html(data.temp);
     });
 });
