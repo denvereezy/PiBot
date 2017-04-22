@@ -1,4 +1,4 @@
-var five = require('johnny-five');
+const five = require('johnny-five');
 
 module.exports = function(pwmPin, directPin, motorSpeed) {
     const motor = new five.Motor({
