@@ -49,10 +49,6 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
-    io.on('readings', function(data) {
-        $('#readings').html(data.readings);
-    });
-
     $("#camSrc").keyup(function() {
         var list = [];
         list.push($(this).val());
