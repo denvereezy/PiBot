@@ -1,5 +1,5 @@
 {
-  "name": "simulate",
+  "name": "PiBot",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -11,6 +11,7 @@
   "dependencies": {
     "express": "^4.15.2",
     "johnny-five": "^0.10.6",
+    "raspi-io": "^8.0.1",
     "socket.io": "^1.7.3"
   },
   "repository": {
