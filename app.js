@@ -25,6 +25,8 @@ board.on('ready', () => {
     const rear_wheels  = new RearWheels(pwmPins[0], directPins[0], motor),
           front_wheels = new FrontWheels(pwmPins[1], directPins[1], motor);
 
+    const fanPin = new five.Pin('P1-13');
+
     io.sockets.on('connection', socket => {
         console.log('socket connection');
 
@@ -32,6 +34,14 @@ board.on('ready', () => {
             socket.emit('temp', {
                 temp: data
             });
+            var num = data.replace(/[^0-9]/g,'');
+
+            if (Number(num) >= 50) {
+                fanPin.high();
+            }
+            else {
+                fanPin.low();
+            }
         });
 
         socket.on('speed', data => {
