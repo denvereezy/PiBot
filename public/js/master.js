@@ -1,7 +1,8 @@
 var io = io();
 $(document).ready(function() {
     var speed = 0;
-    
+    $('#play').html('<i class="fa fa-play" aria-hidden="true"></i>');
+
     $('#g1').click(function(e) {
         speed = 85;
         io.emit('speed', {speed: 85});
@@ -99,5 +100,34 @@ $(document).ready(function() {
 
     io.on('temp', function(data) {
         $('#temp').html(data.temp);
+    });
+
+    $('#rewind').click(function(e) {
+        $('#rewind').css('background', '#00ff00');
+        $('#play, #skip').css('background', '');
+        io.emit('music_event', {action: 'rewind'});
+        e.preventDefault();
+    });
+
+    $('.play').click(function(e) {
+        $('#play').css('background', '#00ff00');
+        $('#rewind, #skip').css('background', '');
+        var $this = $(this);
+        $this.toggleClass('play');
+        if($this.hasClass('play')){
+            $this.html('<i class="fa fa-play" aria-hidden="true"></i>');
+            io.emit('music_event', {action: 'play'});
+        } else {
+            $this.html('<i class="fa fa-pause" aria-hidden="true"></i>');
+            io.emit('music_event', {action: 'play'});
+        }
+        e.preventDefault();
+    });
+
+    $('#skip').click(function(e) {
+        $('#skip').css('background', '#00ff00');
+        $('#play, #rewind').css('background', '');
+        io.emit('music_event', {action: 'skip'});
+        e.preventDefault();
     });
 });
