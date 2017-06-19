@@ -116,10 +116,9 @@ $(document).ready(function() {
         $this.toggleClass('play');
         if($this.hasClass('play')){
             $this.html('<i class="fa fa-play" aria-hidden="true"></i>');
-            io.emit('music_event', {action: 'play'});
+            io.emit('music_event', {action: 'play_pause'});
         } else {
             $this.html('<i class="fa fa-pause" aria-hidden="true"></i>');
-            io.emit('music_event', {action: 'play'});
         }
         e.preventDefault();
     });
