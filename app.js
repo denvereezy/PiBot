@@ -67,6 +67,7 @@ board.on('ready', () => {
             switch (data.direction) {
                 case 'forward':
                     rear_wheels.forward();
+                    front_wheels.stop();
                     console.log('forward');
                     break;
                 case 'left':
