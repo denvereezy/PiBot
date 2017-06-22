@@ -129,4 +129,18 @@ $(document).ready(function() {
         io.emit('music_event', {action: 'skip'});
         e.preventDefault();
     });
+
+    $('#volume_down').click(function(e) {
+        $('#volume_down').css('background', '#00ff00');
+        $('#volume_up').css('background', '');
+        io.emit('music_event', {action: 'volume_down'});
+        e.preventDefault();
+    });
+
+    $('#volume_up').click(function(e) {
+        $('#volume_up').css('background', '#00ff00');
+        $('#volume_down').css('background', '');
+        io.emit('music_event', {action: 'volume_up'});
+        e.preventDefault();
+    });
 });
