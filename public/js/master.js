@@ -104,14 +104,14 @@ $(document).ready(function() {
 
     $('#rewind').click(function(e) {
         $('#rewind').css('background', '#00ff00');
-        $('#play, #skip').css('background', '');
+        $('#play, #skip, #volume_down, #volume_up').css('background', '');
         io.emit('music_event', {action: 'rewind'});
         e.preventDefault();
     });
 
     $('.play').click(function(e) {
         $('#play').css('background', '#00ff00');
-        $('#rewind, #skip').css('background', '');
+        $('#rewind, #skip, #volume_down, #volume_up').css('background', '');
         var $this = $(this);
         $this.toggleClass('play');
         if($this.hasClass('play')){
@@ -125,21 +125,21 @@ $(document).ready(function() {
 
     $('#skip').click(function(e) {
         $('#skip').css('background', '#00ff00');
-        $('#play, #rewind').css('background', '');
+        $('#play, #rewind, #volume_down, #volume_up').css('background', '');
         io.emit('music_event', {action: 'skip'});
         e.preventDefault();
     });
 
     $('#volume_down').click(function(e) {
         $('#volume_down').css('background', '#00ff00');
-        $('#volume_up').css('background', '');
+        $('#volume_up, #rewind, #play, #skip').css('background', '');
         io.emit('music_event', {action: 'volume_down'});
         e.preventDefault();
     });
 
     $('#volume_up').click(function(e) {
         $('#volume_up').css('background', '#00ff00');
-        $('#volume_down').css('background', '');
+        $('#volume_down, #rewind, #play, #skip').css('background', '');
         io.emit('music_event', {action: 'volume_up'});
         e.preventDefault();
     });
