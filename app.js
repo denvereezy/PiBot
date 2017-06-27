@@ -108,7 +108,16 @@ board.on('ready', () => {
                     music.skip.high();
                     setTimeout(() => music.skip.low(), 300);
                     break;
+                case 'volume_down':
+                    music.rewind.high();
+                    setTimeout(() => music.rewind.low(), 3000);
+                    break;
             };
+            case 'volume_up':
+                music.skip.high();
+                setTimeout(() => music.skip.low(), 3000);
+                break;
+        };
         });
     });
 });
