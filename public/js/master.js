@@ -143,4 +143,17 @@ $(document).ready(function() {
         io.emit('music_event', {action: 'volume_up'});
         e.preventDefault();
     });
+
+    $('#power').click(function(e) {
+        $('#volume_down, #rewind, #play, #skip, #volume_up').css('background', '');
+        var $this = $(this);
+        $this.toggleClass('power');
+        if($this.hasClass('power')){
+            $this.css('background', '#00ff00');
+            io.emit('music_event', {action: 'power_on'});
+        } else {
+            io.emit('music_event', {action: 'power_off'});
+            $this.css('background', '');
+        }
+    })
 });
