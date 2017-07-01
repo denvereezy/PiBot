@@ -29,7 +29,8 @@ board.on('ready', () => {
     const music = {
         play_pause  : new five.Pin('P1-15'),
         rewind      : new five.Pin('P1-16'),
-        skip        : new five.Pin('P1-18')
+        skip        : new five.Pin('P1-18'),
+        power       : new five.Pin('P1-37')
     };
 
     io.sockets.on('connection', socket => {
@@ -112,13 +113,18 @@ board.on('ready', () => {
                     music.rewind.high();
                     setTimeout(() => music.rewind.low(), 4000);
                     break;
+                case 'volume_up':
+                    music.skip.high();
+                    setTimeout(() => music.skip.low(), 4000);
+                    break;
+                case 'power_on':
+                    music.power.high();
+                    break;
+                case 'power_off':
+                    music.power.low();
+                    break;
             };
-            case 'volume_up':
-                music.skip.high();
-                setTimeout(() => music.skip.low(), 4000);
-                break;
         };
-        });
     });
 });
 
